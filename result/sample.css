@@ -1,0 +1,221 @@
+@charset "utf-8";
+/*-----------------------------------------------------
+ | 全体のスタイル定義
+ |
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13pt;
+}
+
+/* ヘッダー部 */
+header {
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
+  max-height: 140px;
+  z-index: 999;
+  background-color: slategray;
+  
+}
+/* ヘッダー内テキスト */
+header h1 {
+  padding: 0 20px;    /* auto は、使えない */
+  color: whitesmoke;
+}
+
+/* ボディ部 */
+main {
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 0;
+  width: 100vw;
+}
+/* ボディ部・コンテナー */
+#container {
+  display: block;
+  position: relative;
+  height: 100vh;
+  margin: 10px;
+}
+
+/* フッター部 */
+footer {
+  position: fixed;
+  bottom: 0;
+  min-width: 100vw;
+  max-height: 40px;
+  z-index: 999;
+  background-color: #eee;
+}
+/* フッター：コピーライト */
+footer p {
+  padding: 0 20px;
+  font-size: x-small;
+  color: dimgray;
+}
+
+/*-----------------------------------------------------
+ | Flexbox定義と共通定義
+ |
+ */
+#main-box {
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+}
+
+/* ボックスタイトル */
+.box-title {
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* ボックスボディ */
+.box-body {
+  padding-top: 20px;
+}
+
+/* ガイド */
+.guide-text {
+  margin-left: 20px;
+  color: dimgray;
+}
+.success-mesg {
+  margin-left: 20px;
+  color: forestgreen;
+}
+.error-mesg {
+  margin-left: 20px;
+  color: crimson;
+}
+
+ /*-----------------------------------------------------
+ | 左側のスタイル定義
+ |
+ */
+#left-box {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+#left-box > .box-title {
+  background-color: honeydew;
+}
+
+/* フォーム */
+.simple-form, .result-send {
+  margin: 20px;
+}
+
+/* フォームレイアウト（テーブル） */
+th, td {
+  padding-bottom: 10px;
+}
+th {
+  padding-right: 20px;
+  font-size: 11pt;
+}
+th#send {
+  width: 80px;
+  text-align: right;
+}
+th#send::after {
+  content: " *";
+  color: crimson;
+}
+th#receive {
+  width: 120px;
+}
+
+/* 入力系 */
+input[type=text], input[type=number] {
+  width: 420px;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+/* フォーカスされた時 */
+input:focus {
+  outline: none;
+  border-bottom: 2px solid salmon;
+}
+
+/* ボタン・コンテナー */
+.btn-box {
+  display: flex;
+  margin-top: 50px;
+}
+/* ボタン */
+.btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.btn:hover {
+  box-shadow: 2px 2px 2px silver;
+  cursor: pointer;
+}
+.btn-send {
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid dodgerblue;
+  background-color: dodgerblue;
+}
+.btn-init {
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid slategray;
+  background-color: slategray;
+}
+.btn-save {
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid forestgreen;
+  background-color: forestgreen;
+}
+.btn-load {
+  margin-right: 10px;
+  color: #fff;
+  border: 1px solid orangered;
+  background-color: orangered;
+}
+
+ /*-----------------------------------------------------
+ | 右側のスタイル定義
+ |
+ */
+#right-box {
+  position: relative;
+  width: 50vw;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+#right-box > .box-title {
+  background-color: #eee;
+}
+
+/* 結果表示ラベル */
+#result-name-label, #result-mail-label, #result-age-label {
+  color: steelblue;
+}
+
+/* 結果表示データ */
+#result-name, #result-mail, #result-age {
+  color: crimson;
+}

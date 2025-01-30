@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML/CSSの基礎</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./sample.css">
+</head>
+
+<body>
+<header>
+  <h1>This is Header</h1>
+</header>
+
+<main>
+  <div id="container">
+    <div id="main-box">
+      <div id="left-box">
+        <div class="box-title">LEFT BOX</div>
+        <div class="box-body">
+          <div id="from-message" class="guide-text">次の情報を入力して下さい：</div>
+          <form class="simple-form">
+            <table>
+              <tr>
+                <th id="send"><label for="simple-form-name">名前</label></th>
+                <td><input type="text" id="simple-form-name" name="name" autofocus required></td>
+              </tr>
+              <tr>
+                <th id="send"><label for="simple-form-mail">メール</label></th>
+                <td><input type="text" id="simple-form-mail" name="mail" required></td>
+              </tr>
+              <tr>
+                <th id="send"><label for="simple-form-age">年齢</label></th>
+                <td><input type="number" id="simple-form-age" name="age" required></td>
+              </tr>
+            </table>
+            <div class="btn-box">
+              <button type="button" class="btn btn-send">送　信</button>
+              <button type="button" class="btn btn-init">初期化</button>
+              <button type="button" class="btn btn-save">保　存</button>
+              <button type="button" class="btn btn-load">復　元</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="right-box">
+        <div class="box-title">RIGHT BOX</div>
+        <div class="box-body">
+          <div id="result-mesg" class="guide-text">送信データを待っています：</div>
+          <table class="result-send">
+            <tr>
+              <th id="receive"><div id="result-name-label">？？？</div></th>
+              <td><div id="result-name">xxxxx</div></td>
+            </tr>
+            <tr>
+              <th id="receive"><div id="result-mail-label">？？？</div></th>
+              <td><div id="result-mail">xxxxx</div></td>
+            </tr>
+            <tr>
+              <th id="receive"><div id="result-age-label">？？？</div></th>
+              <td><div id="result-age">nnn</div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024, SAMURAI, Inc. - Sample -</p>
+</footer>
+
+<script src="./sample.lib.js"></script>
+<script src="./sample.app.js"></script>
+</body>
+</html>
