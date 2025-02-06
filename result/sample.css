@@ -108,7 +108,7 @@ footer p {
 #left-box {
   position: relative;
   width: 50vw;
-  height: 50vh;
+  /* height: 50vh; */    /* コメント */
   margin-right: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -159,7 +159,7 @@ input:focus {
 /* ボタン・コンテナー */
 .btn-box {
   display: flex;
-  margin-top: 50px;
+  margin-top: 40px;   /* 50px -> 40px に変更 */
 }
 /* ボタン */
 .btn {
