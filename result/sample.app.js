@@ -124,6 +124,7 @@ const App = {
     // セッションストレージに保存する
     sessionStorage.setItem(App.key, JSON.stringify(App.data));
     Util.resetFormData();
+    App.data.reset();
 
     // メッセージの設定
     Util.setGuideText('success-mesg', 'データを保存しました：');
@@ -144,6 +145,11 @@ const App = {
     App.form.Name.value = data.name;
     App.form.Mail.value = data.mail;
     App.form.Age.value  = data.age;
+
+    // データの入力状態復元
+    App.data.Name = data.name;
+    App.data.Mail = data.mail;
+    App.data.Age = data.age;
 
     //セッションストレージのクリア
     sessionStorage.removeItem(App.key);
